@@ -73,7 +73,7 @@ export default async function AuditLogPage({
         >
           All ({total})
         </a>
-        {actionTypes.map(({ action: a }) => (
+        {actionTypes.map(({ action: a }: { action: string }) => (
           <a
             key={a}
             href={`/admin/audit-log?action=${a}`}

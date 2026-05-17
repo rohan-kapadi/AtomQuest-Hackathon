@@ -40,6 +40,13 @@ export default async function ReportsPage() {
       const achByQ = Object.fromEntries(goal.achievements.map(a => [a.quarter, a]))
       const scores = goal.achievements.filter(a => a.progressScore != null).map(a => a.progressScore as number)
       const overall = scores.length > 0 ? scores.reduce((s, v) => s + v, 0) / scores.length : null
+      const mapAch = (a: typeof goal.achievements[0] | undefined) => a ? {
+        progressScore: a.progressScore,
+        actualValue: a.actualValue,
+        actualDate: a.actualDate?.toISOString() ?? null,
+        isZeroAchieved: a.isZeroAchieved
+      } : null
+
       return {
         employeeName: sheet.employee.name,
         department: sheet.employee.department?.name ?? '-',
@@ -51,10 +58,10 @@ export default async function ReportsPage() {
         targetDate: goal.targetDate?.toISOString() ?? null,
         weightage: goal.weightage,
         achievements: {
-          Q1: achByQ['Q1'] ? { ...achByQ['Q1'], actualDate: achByQ['Q1'].actualDate?.toISOString() ?? null } : null,
-          Q2: achByQ['Q2'] ? { ...achByQ['Q2'], actualDate: achByQ['Q2'].actualDate?.toISOString() ?? null } : null,
-          Q3: achByQ['Q3'] ? { ...achByQ['Q3'], actualDate: achByQ['Q3'].actualDate?.toISOString() ?? null } : null,
-          Q4: achByQ['Q4'] ? { ...achByQ['Q4'], actualDate: achByQ['Q4'].actualDate?.toISOString() ?? null } : null,
+          Q1: mapAch(achByQ['Q1']),
+          Q2: mapAch(achByQ['Q2']),
+          Q3: mapAch(achByQ['Q3']),
+          Q4: mapAch(achByQ['Q4']),
         },
         overallScore: overall,
       }
