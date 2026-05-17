@@ -150,6 +150,90 @@ The app supports 4 Unit of Measure types:
 
 The application follows a layered architecture that keeps concerns separated and easy to reason about.
 
+## Architecture Diagram
+
+![Architecture Diagram](image.png)
+
+```mermaid
+flowchart TD
+    subgraph L1["Layer 1 - Client (Browser)"]
+        EMP["Employee<br/>Create goals<br/>Log achievements<br/>View check-ins"]
+        MGR["Manager (L1)<br/>Approve / Return goals<br/>Conduct check-ins"]
+        ADM["Admin / HR<br/>Unlock goals<br/>Export reports<br/>Manage cycles"]
+    end
+
+    subgraph L2["Layer 2 - Frontend Framework"]
+        FE["Next.js App Router<br/>Tailwind CSS + shadcn/ui<br/>React Hook Form + Zod<br/>TypeScript"]
+    end
+
+    subgraph L3["Layer 3 - Authentication"]
+        AUTH["NextAuth.js v5<br/>Credentials Provider<br/>JWT Session<br/>Role stored in session"]
+        MID["Middleware<br/>Route guards<br/>Role-based redirects<br/>Permission checks"]
+    end
+
+    subgraph L4["Layer 4 - API Routes"]
+        GOALS["Goals API<br/>CRUD · Submit · Approve<br/>Return · Unlock"]
+        ACH["Achievements API<br/>Log actuals<br/>Compute scores<br/>Shared goal sync"]
+        CHK["Check-ins API<br/>Manager comments<br/>Quarter tracking"]
+        ADMINAPI["Admin API<br/>Reports export<br/>Audit log<br/>Cycle management"]
+        SCORE["score-calculator.ts<br/>4 formulas:<br/>Min / Max / Timeline / Zero"]
+        AUDIT["audit.ts<br/>Logs post-lock changes<br/>with user + timestamp"]
+        SHARED["shared-goals.ts<br/>Syncs primary owner achievement<br/>to all linked copies"]
+    end
+
+    subgraph L5["Layer 5 - ORM / Data Access"]
+        PRISMA["Prisma ORM<br/>Type-safe queries<br/>Single source of truth"]
+        MODELS["User · GoalSheet · Goal<br/>Achievement · Checkin · AuditLog"]
+    end
+
+    subgraph L6["Layer 6 - Database"]
+        DB["Supabase PostgreSQL<br/>Connection pooling<br/>Direct URL for Prisma migrations"]
+    end
+
+    subgraph EXT["External Services"]
+        VERCEL["Vercel<br/>Hosting · CDN<br/>Auto-deploy on git push"]
+        GITHUB["GitHub<br/>Source code<br/>Submission artifact"]
+        RESEND["Resend (Bonus)<br/>Email notifications"]
+        GEMINI["Gemini API (Bonus)<br/>AI goal suggestions"]
+    end
+
+    EMP --> FE
+    MGR --> FE
+    ADM --> FE
+
+    FE --> AUTH
+    FE --> MID
+
+    AUTH --> GOALS
+    AUTH --> ACH
+    MID --> CHK
+    MID --> ADMINAPI
+
+    GOALS --> SCORE
+    GOALS --> AUDIT
+    ACH --> SCORE
+    ACH --> SHARED
+    ADMINAPI --> AUDIT
+
+    GOALS --> PRISMA
+    ACH --> PRISMA
+    CHK --> PRISMA
+    ADMINAPI --> PRISMA
+    SCORE --> PRISMA
+    AUDIT --> PRISMA
+    SHARED --> PRISMA
+
+    PRISMA --> MODELS
+    PRISMA --> DB
+
+    FE -. deploy .-> VERCEL
+    FE -. source .-> GITHUB
+    ADMINAPI -. emails .-> RESEND
+    GOALS -. AI assist .-> GEMINI
+```
+
+This diagram mirrors the layered architecture used in the project: client roles at the top, Next.js and authentication in the middle, business APIs and helper modules underneath, Prisma as the data-access layer, and PostgreSQL as the persistence layer, with optional bonus integrations connected externally.
+
 ### Layer 1: Client
 
 Browser-based UI for:
