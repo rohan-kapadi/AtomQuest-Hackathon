@@ -4,7 +4,7 @@ import { prisma } from '@/lib/prisma'
 import { Users, Building2, User, Mail, Shield } from 'lucide-react'
 import { AddEmployeeModal } from '@/components/admin/AddEmployeeModal'
 
-export const metadata = { title: 'Employee Directory - AtomQuest' }
+export const metadata = { title: 'Employee Directory - GoalSphere' }
 
 export default async function AdminEmployeesPage() {
   const session = await auth()

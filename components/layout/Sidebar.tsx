@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { signOut } from 'next-auth/react'
 import { useState } from 'react'
@@ -105,12 +106,12 @@ export function Sidebar({ user }: SidebarProps) {
       </button>
 
       <div className={`flex items-center gap-3 border-b border-white/6 p-4 ${collapsed ? 'justify-center' : ''}`}>
-        <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl border border-violet-500/20 bg-[linear-gradient(135deg,rgba(124,58,237,0.22),rgba(99,102,241,0.2))] shadow-[0_12px_32px_rgba(124,58,237,0.2)]">
-          <Target className="w-4 h-4 text-white" />
+        <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center overflow-hidden rounded-xl bg-white shadow-[0_12px_32px_rgba(124,58,237,0.2)]">
+          <Image src="/logo.png" alt="GoalSphere" width={40} height={40} className="h-full w-full object-contain p-1" />
         </div>
         {!collapsed && (
           <div>
-            <span className="font-heading text-sm font-semibold text-white">AtomQuest</span>
+            <span className="font-heading text-sm font-semibold text-white">GoalSphere</span>
             <p className="text-xs text-slate-500">Performance OS</p>
           </div>
         )}

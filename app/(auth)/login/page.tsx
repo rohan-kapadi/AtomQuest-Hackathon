@@ -3,6 +3,7 @@
 import { Suspense, useState } from 'react'
 import { signIn } from 'next-auth/react'
 import { useRouter, useSearchParams } from 'next/navigation'
+import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
@@ -13,7 +14,7 @@ const DEMO_ROLES = [
   {
     role: 'ADMIN',
     label: 'Admin / HR',
-    email: 'admin@atomquest.com',
+    email: 'admin@goalsphere.com',
     password: 'Admin@123',
     icon: Shield,
     color: 'from-violet-500 to-purple-600',
@@ -23,7 +24,7 @@ const DEMO_ROLES = [
   {
     role: 'MANAGER',
     label: 'Manager (L1)',
-    email: 'manager@atomquest.com',
+    email: 'manager@goalsphere.com',
     password: 'Manager@123',
     icon: Users,
     color: 'from-cyan-500 to-blue-600',
@@ -33,7 +34,7 @@ const DEMO_ROLES = [
   {
     role: 'EMPLOYEE',
     label: 'Employee',
-    email: 'employee@atomquest.com',
+    email: 'employee@goalsphere.com',
     password: 'Employee@123',
     icon: User,
     color: 'from-slate-500 to-slate-700',
@@ -107,10 +108,10 @@ function LoginContent() {
       <div className="relative z-10 mx-auto grid min-h-[calc(100vh-5rem)] max-w-6xl items-center gap-8 lg:grid-cols-[1.1fr_0.9fr]">
         <div className="space-y-8">
           <div className="inline-flex items-center gap-3 rounded-full border border-white/8 bg-white/[0.03] px-4 py-2 text-sm text-slate-300">
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[image:var(--accent-gradient)] shadow-[0_10px_30px_rgba(124,58,237,0.35)]">
-              <Target className="h-4 w-4 text-white" />
+            <div className="flex h-8 w-8 overflow-hidden items-center justify-center rounded-full bg-white shadow-[0_10px_30px_rgba(124,58,237,0.35)]">
+              <Image src="/logo.png" alt="GoalSphere" width={32} height={32} className="h-full w-full object-contain p-0.5" />
             </div>
-            AtomQuest Enterprise Performance OS
+            GoalSphere Enterprise Performance OS
           </div>
 
           <div className="max-w-xl">
@@ -154,7 +155,7 @@ function LoginContent() {
 
         <Card className="mx-auto w-full max-w-md">
           <CardHeader className="pb-2">
-            <CardTitle>Sign in to AtomQuest</CardTitle>
+            <CardTitle>Sign in to GoalSphere</CardTitle>
             <CardDescription>
               Use your credentials or jump into one of the seeded demo roles.
             </CardDescription>

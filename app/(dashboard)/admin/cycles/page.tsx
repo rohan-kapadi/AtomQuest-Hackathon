@@ -4,7 +4,7 @@ import { prisma } from '@/lib/prisma'
 import { GitBranch, Calendar, CheckCircle2 } from 'lucide-react'
 import { CycleModal } from '@/components/admin/CycleModal'
 
-export const metadata = { title: 'Goal Cycles - AtomQuest' }
+export const metadata = { title: 'Goal Cycles - GoalSphere' }
 
 export default async function AdminCyclesPage() {
   const session = await auth()

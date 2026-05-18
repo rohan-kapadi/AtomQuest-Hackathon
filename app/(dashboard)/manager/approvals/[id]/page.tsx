@@ -8,7 +8,7 @@ import { ArrowLeft, Calendar, Building2, Lock, ClipboardCheck } from 'lucide-rea
 import Link from 'next/link'
 import type { GoalStatus } from '@prisma/client'
 
-export const metadata = { title: 'Review Goal Sheet — AtomQuest' }
+export const metadata = { title: 'Review Goal Sheet — GoalSphere' }
 
 export default async function ApprovalReviewPage({
   params,

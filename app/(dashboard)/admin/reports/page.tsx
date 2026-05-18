@@ -4,7 +4,7 @@ import { prisma } from '@/lib/prisma'
 import { TeamProgressTable } from '@/components/dashboard/TeamProgressTable'
 import { Download, FileSpreadsheet, TrendingUp } from 'lucide-react'
 
-export const metadata = { title: 'Reports & Export - AtomQuest' }
+export const metadata = { title: 'Reports & Export - GoalSphere' }
 
 export default async function ReportsPage() {
   const session = await auth()

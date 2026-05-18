@@ -4,7 +4,7 @@ import { Resend } from 'resend'
 // so we wrap calls in try/catch and log locally for hackathon purposes.
 const resend = new Resend(process.env.RESEND_API_KEY || 're_mock_key')
 
-const MOCK_SENDER = 'AtomQuest <onboarding@resend.dev>'
+const MOCK_SENDER = 'GoalSphere <onboarding@resend.dev>'
 
 export async function sendSubmissionEmail(employeeName: string, managerEmail: string, sheetId: string) {
   try {

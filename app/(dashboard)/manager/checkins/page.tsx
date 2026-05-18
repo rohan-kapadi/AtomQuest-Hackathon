@@ -4,7 +4,7 @@ import { prisma } from '@/lib/prisma'
 import { ManagerCheckinPanel } from '@/components/checkins/ManagerCheckinPanel'
 import { Users, ClipboardCheck } from 'lucide-react'
 
-export const metadata = { title: 'Team Check-ins — AtomQuest' }
+export const metadata = { title: 'Team Check-ins — GoalSphere' }
 
 export default async function ManagerCheckinsPage() {
   const session = await auth()

@@ -1,4 +1,4 @@
-// Prisma config for AtomQuest Goal Portal
+// Prisma config for GoalSphere Goal Portal
 // Prisma 7: connection URLs and seed config live here, NOT in package.json / schema.prisma
 import "dotenv/config";
 import { defineConfig } from "prisma/config";

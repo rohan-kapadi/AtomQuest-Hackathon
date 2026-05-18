@@ -18,7 +18,7 @@ const ROLES = [
   {
     role: 'ADMIN' as Role,
     label: 'Priya Sharma (Admin)',
-    email: 'admin@atomquest.com',
+    email: 'admin@goalsphere.com',
     password: 'Admin@123',
     icon: Shield,
     color: 'from-violet-500 to-purple-600',
@@ -27,7 +27,7 @@ const ROLES = [
   {
     role: 'MANAGER' as Role,
     label: 'Rahul Mehta (Manager)',
-    email: 'manager@atomquest.com',
+    email: 'manager@goalsphere.com',
     password: 'Manager@123',
     icon: Users,
     color: 'from-blue-500 to-cyan-600',
@@ -36,7 +36,7 @@ const ROLES = [
   {
     role: 'EMPLOYEE' as Role,
     label: 'Sneha Patil (Employee)',
-    email: 'employee@atomquest.com',
+    email: 'employee@goalsphere.com',
     password: 'Employee@123',
     icon: User,
     color: 'from-emerald-500 to-teal-600',

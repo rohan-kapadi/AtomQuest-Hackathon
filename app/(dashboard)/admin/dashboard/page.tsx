@@ -5,7 +5,7 @@ import { Users, CheckCircle2, Clock, RotateCcw, Target, BarChart2, AlertTriangle
 import Link from 'next/link'
 import { AnalyticsCharts } from '@/components/dashboard/AnalyticsCharts'
 
-export const metadata = { title: 'Admin Dashboard - AtomQuest' }
+export const metadata = { title: 'Admin Dashboard - GoalSphere' }
 
 export default async function AdminDashboardPage() {
   const session = await auth()

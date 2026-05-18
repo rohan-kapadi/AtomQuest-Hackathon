@@ -92,7 +92,7 @@ export function AddEmployeeModal({ departments, managers }: AddEmployeeModalProp
                   value={formData.email}
                   onChange={e => setFormData({ ...formData, email: e.target.value })}
                   className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-xl text-white text-sm focus:outline-none focus:border-blue-500 transition-colors"
-                  placeholder="john@atomquest.com"
+                  placeholder="john@goalsphere.com"
                 />
               </div>
 

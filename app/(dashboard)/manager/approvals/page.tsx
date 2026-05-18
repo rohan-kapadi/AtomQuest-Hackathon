@@ -7,7 +7,7 @@ import { ClipboardList, ChevronRight, Clock } from 'lucide-react'
 import Link from 'next/link'
 import type { GoalStatus } from '@prisma/client'
 
-export const metadata = { title: 'Pending Approvals - AtomQuest' }
+export const metadata = { title: 'Pending Approvals - GoalSphere' }
 
 export default async function ManagerApprovalsPage() {
   const session = await auth()

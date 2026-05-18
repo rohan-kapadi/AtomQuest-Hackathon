@@ -32,7 +32,7 @@ async function main() {
   const admin = await prisma.user.create({
     data: {
       name: 'Priya Sharma',
-      email: 'admin@atomquest.com',
+      email: 'admin@goalsphere.com',
       passwordHash: await bcrypt.hash('Admin@123', 10),
       role: 'ADMIN',
       departmentId: hrDept.id,
@@ -42,7 +42,7 @@ async function main() {
   const manager = await prisma.user.create({
     data: {
       name: 'Rahul Mehta',
-      email: 'manager@atomquest.com',
+      email: 'manager@goalsphere.com',
       passwordHash: await bcrypt.hash('Manager@123', 10),
       role: 'MANAGER',
       departmentId: salesDept.id,
@@ -52,7 +52,7 @@ async function main() {
   const employee = await prisma.user.create({
     data: {
       name: 'Sneha Patil',
-      email: 'employee@atomquest.com',
+      email: 'employee@goalsphere.com',
       passwordHash: await bcrypt.hash('Employee@123', 10),
       role: 'EMPLOYEE',
       departmentId: salesDept.id,
@@ -64,7 +64,7 @@ async function main() {
   const employee2 = await prisma.user.create({
     data: {
       name: 'Arjun Nair',
-      email: 'employee2@atomquest.com',
+      email: 'employee2@goalsphere.com',
       passwordHash: await bcrypt.hash('Employee@123', 10),
       role: 'EMPLOYEE',
       departmentId: salesDept.id,
@@ -242,10 +242,10 @@ async function main() {
 
   console.log('\n✅ Seed complete!\n')
   console.log('Login credentials:')
-  console.log('  Admin:      admin@atomquest.com       / Admin@123')
-  console.log('  Manager:    manager@atomquest.com     / Manager@123')
-  console.log('  Employee 1: employee@atomquest.com    / Employee@123')
-  console.log('  Employee 2: employee2@atomquest.com   / Employee@123')
+  console.log('  Admin:      admin@goalsphere.com       / Admin@123')
+  console.log('  Manager:    manager@goalsphere.com     / Manager@123')
+  console.log('  Employee 1: employee@goalsphere.com    / Employee@123')
+  console.log('  Employee 2: employee2@goalsphere.com   / Employee@123')
 }
 
 main()

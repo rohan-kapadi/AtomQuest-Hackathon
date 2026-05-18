@@ -6,7 +6,7 @@ import { ArrowLeft } from 'lucide-react'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'New Goal Sheet — AtomQuest',
+  title: 'New Goal Sheet — GoalSphere',
 }
 
 export default async function NewGoalSheetPage() {

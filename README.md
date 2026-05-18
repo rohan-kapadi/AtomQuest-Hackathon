@@ -1,6 +1,6 @@
-# AtomQuest Goal Portal
+# GoalSphere Goal Portal
 
-AtomQuest is an in-house Goal Setting and Tracking Portal built for a 48-hour hackathon. It replaces spreadsheet-driven performance management with a structured, role-based system where employees create goals, managers review and approve them, and Admin/HR oversees cycles, audit history, and reporting.
+GoalSphere is an in-house Goal Setting and Tracking Portal built for a 48-hour hackathon. It replaces spreadsheet-driven performance management with a structured, role-based system where employees create goals, managers review and approve them, and Admin/HR oversees cycles, audit history, and reporting.
 
 The product is designed as an enterprise SaaS experience with a refined dark UI, strong workflow controls, and clear role separation across Employee, Manager, and Admin/HR journeys.
 
@@ -14,13 +14,13 @@ Many organizations still manage annual goals and quarterly performance updates t
 - Quarterly achievements are not centralized.
 - Audit trails and exports are painful for HR teams.
 
-AtomQuest solves this by turning goal management into a single workflow:
+GoalSphere solves this by turning goal management into a single workflow:
 
 `Employee creates goals -> Manager approves/returns -> Goals lock -> Employee logs quarterly achievements -> Manager conducts check-ins -> Admin monitors, unlocks when needed, and exports reports`
 
 ## What The Product Does
 
-AtomQuest supports the full goal lifecycle:
+GoalSphere supports the full goal lifecycle:
 
 - Employees create goal sheets for the active cycle.
 - Managers review, edit, approve, or return submitted goal sheets.
@@ -329,9 +329,9 @@ The schema is centered around the goal lifecycle.
 Seeded demo users:
 
 ```text
-Admin:    admin@atomquest.com    / Admin@123
-Manager:  manager@atomquest.com  / Manager@123
-Employee: employee@atomquest.com / Employee@123
+Admin:    admin@goalsphere.com    / Admin@123
+Manager:  manager@goalsphere.com  / Manager@123
+Employee: employee@goalsphere.com / Employee@123
 ```
 
 These credentials are also used by the in-app demo role switcher.
@@ -463,7 +463,7 @@ The interface was redesigned as a premium dark enterprise product.
 
 ## Hackathon Value
 
-AtomQuest is practical, demo-friendly, and enterprise-relevant.
+GoalSphere is practical, demo-friendly, and enterprise-relevant.
 
 It demonstrates:
 
@@ -497,7 +497,7 @@ npm run build
 
 This repository contains:
 
-- Source code for the AtomQuest Goal Portal
+- Source code for the GoalSphere Goal Portal
 - Full role-based workflows
 - Prisma schema and seed data
 - Bonus integrations for AI and email

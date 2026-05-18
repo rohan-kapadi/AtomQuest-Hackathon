@@ -6,7 +6,7 @@ import { ProgressScore } from '@/components/goals/ProgressScore'
 import { ArrowLeft, Lock, Clock } from 'lucide-react'
 import Link from 'next/link'
 
-export const metadata = { title: 'Quarterly Check-in — AtomQuest' }
+export const metadata = { title: 'Quarterly Check-in — GoalSphere' }
 
 export default async function CheckinPage({
   params,

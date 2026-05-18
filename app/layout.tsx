@@ -18,7 +18,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AtomQuest",
+  title: "GoalSphere",
   description: "Enterprise goal setting and tracking portal",
 };
 

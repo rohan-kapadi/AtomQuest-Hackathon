@@ -94,7 +94,7 @@ export function AnalyticsCharts({ thrustAreaData, qoqData }: Props) {
             <ResponsiveContainer width="100%" height="100%">
               <AreaChart data={qoqData} margin={{ top: 10, right: 12, bottom: 0, left: -20 }}>
                 <defs>
-                  <linearGradient id="atomquestArea" x1="0" y1="0" x2="0" y2="1">
+                  <linearGradient id="goalsphereArea" x1="0" y1="0" x2="0" y2="1">
                     <stop offset="0%" stopColor="#8b5cf6" stopOpacity={0.45} />
                     <stop offset="100%" stopColor="#8b5cf6" stopOpacity={0.02} />
                   </linearGradient>
@@ -107,7 +107,7 @@ export function AnalyticsCharts({ thrustAreaData, qoqData }: Props) {
                   itemStyle={{ color: '#c4b5fd' }}
                   formatter={(value) => [`${value ?? 0}%`, 'Avg Progress']}
                 />
-                <Area type="monotone" dataKey="avgScore" stroke="none" fill="url(#atomquestArea)" />
+                <Area type="monotone" dataKey="avgScore" stroke="none" fill="url(#goalsphereArea)" />
                 <Line
                   type="monotone"
                   dataKey="avgScore"

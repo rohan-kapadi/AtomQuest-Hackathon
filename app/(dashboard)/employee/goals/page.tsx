@@ -8,7 +8,7 @@ import Link from 'next/link'
 import type { GoalStatus } from '@prisma/client'
 
 export const metadata = {
-  title: 'My Goal Sheets - AtomQuest',
+  title: 'My Goal Sheets - GoalSphere',
 }
 
 export default async function EmployeeGoalsPage() {

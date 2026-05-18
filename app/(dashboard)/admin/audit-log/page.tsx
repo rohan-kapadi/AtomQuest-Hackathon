@@ -4,7 +4,7 @@ import { prisma } from '@/lib/prisma'
 import { AuditTimeline } from '@/components/dashboard/AuditTimeline'
 import { Shield, Search } from 'lucide-react'
 
-export const metadata = { title: 'Audit Log — AtomQuest Admin' }
+export const metadata = { title: 'Audit Log — GoalSphere Admin' }
 
 export default async function AuditLogPage({
   searchParams,

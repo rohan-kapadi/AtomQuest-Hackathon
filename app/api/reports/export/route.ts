@@ -149,7 +149,7 @@ export async function GET(req: NextRequest) {
   ]
 
   const csv = csvLines.join('\r\n')
-  const filename = `atomquest-report-${cycle.name.replace(/\s+/g, '-')}.csv`
+  const filename = `goalsphere-report-${cycle.name.replace(/\s+/g, '-')}.csv`
 
   return new NextResponse(csv, {
     headers: {

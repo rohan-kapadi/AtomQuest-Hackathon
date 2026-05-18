@@ -34,7 +34,7 @@ export default async function DashboardLayout({
               <div className="h-2 w-2 rounded-full bg-violet-300 shadow-[0_0_12px_rgba(196,181,253,0.8)]" />
             </div>
             <div className="min-w-0">
-              <h2 className="truncate text-sm font-semibold text-white">AtomQuest</h2>
+              <h2 className="truncate text-sm font-semibold text-white">GoalSphere</h2>
               <p className="text-xs text-slate-500">FY 2025-26 Active Cycle</p>
             </div>
           </div>

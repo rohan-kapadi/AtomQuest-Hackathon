@@ -57,7 +57,7 @@ export async function POST(req: NextRequest) {
     const ai = new GoogleGenAI({ apiKey })
 
     const prompt = `
-      You are an expert HR and Performance Management AI for AtomQuest.
+      You are an expert HR and Performance Management AI for GoalSphere.
       Based on the following employee role description, suggest 3 to 4 SMART goals.
       Return exactly a JSON array of objects. Do not include markdown code blocks, just the raw JSON.
       

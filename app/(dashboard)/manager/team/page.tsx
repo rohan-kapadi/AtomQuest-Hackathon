@@ -7,7 +7,7 @@ import { Users, ChevronRight, Clock } from 'lucide-react'
 import Link from 'next/link'
 import type { GoalStatus } from '@prisma/client'
 
-export const metadata = { title: 'My Team - AtomQuest' }
+export const metadata = { title: 'My Team - GoalSphere' }
 
 export default async function ManagerTeamPage() {
   const session = await auth()

@@ -5,7 +5,7 @@ import { SharedGoalForm } from '@/components/goals/SharedGoalForm'
 import { Users, Share2, CheckCircle2 } from 'lucide-react'
 import type { GoalStatus } from '@prisma/client'
 
-export const metadata = { title: 'Push Shared Goal — AtomQuest' }
+export const metadata = { title: 'Push Shared Goal — GoalSphere' }
 
 export default async function SharedGoalsPage() {
   const session = await auth()
